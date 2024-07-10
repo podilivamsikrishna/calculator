@@ -1,0 +1,95 @@
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes buttonClick {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.9);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+  transform: scale(1.05);
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: #f0f0f0;
+  text-align: right;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button {
+  background: #feb47b;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.button:hover {
+  background: #ff7e5f;
+  animation: buttonClick 0.3s ease;
+}
+
+.operator {
+  background: #ff7e5f;
+}
+
+.clear {
+  background: #ff6f61;
+  grid-column: span 4;
+}
+
+body.day {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+body.night {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
